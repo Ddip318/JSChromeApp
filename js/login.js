@@ -16,6 +16,14 @@ function saveAndRemoveLoginForm(event) {
   welcomeUser.innerText = `Welcome ${username}`;
   const welcome = document.getElementById("welcome");
   welcome.style.display = "block";
+  const weather = document.getElementById("weather");
+  weather.style.display = "block";
+  const secondBox = document.getElementById("secondBox");
+  secondBox.style.display = "block";
+  const inputAndToDo = document.querySelector(".inputAndtoDo");
+  inputAndToDo.style.display = "flex";
+
+  navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);
 }
 
 const loginForm = document.getElementById("loginForm");

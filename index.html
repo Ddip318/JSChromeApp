@@ -8,28 +8,44 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="firstBox">
-      <form id="loginForm">
-        <input type="text" id="username" placeholder="Input your name" />
-        <br />
-        <input
-          type="password"
-          id="password"
-          placeholder="Input your password"
-        />
-        <br />
-        <button>로그인</button>
-      </form>
-      <div id="welcome" style="display: none">
-        <span id="welcomeUser"></span>
+    <div id="wrapper">
+      <div id="firstBox">
+        <form id="loginForm">
+          <input type="text" id="username" placeholder="Input your name" />
+          <br />
+          <input
+            type="password"
+            id="password"
+            placeholder="Input your password"
+          />
+          <br />
+          <button>로그인</button>
+        </form>
+        <div id="welcome" style="display: none">
+          <span id="welcomeUser"></span>
+        </div>
+        <div id="weather" style="display: none">
+          <span id="tempInfo" class="weatherInfo"></span>
+          <span id="humidityInfo" class="weatherInfo"></span>
+          <span id="windSpeedInfo" class="weatherInfo"></span>
+          <span id="locationInfo" style="margin-top: 10px">
+            <span id="latitude" class="locationCoordinates"></span>
+            <span id="longitude" class="locationCoordinates"></span>
+          </span>
+        </div>
       </div>
-    </div>
-    <div id="secondBox">
-      <h1 class="clock"></h1>
-      <script src="js/login.js"></script>
-      <script src="js/clock.js"></script>
-      <script src="js/changeBackground.js"></script>
-      <script src="js/weather.js"></script>
+      <div id="secondBox" style="display: none">
+        <h1 class="clock"></h1>
+        <form class="inputAndtoDo">
+          <input id="inputQuest" placeholder="Input your Quest" />
+          <ul class="toDoList"></ul>
+        </form>
+        <script src="js/login.js"></script>
+        <script src="js/clock.js"></script>
+        <script src="js/changeBackground.js"></script>
+        <script src="js/weather.js"></script>
+        <script src="js/toDo.js"></script>
+      </div>
     </div>
   </body>
 </html>
